@@ -1,6 +1,8 @@
 package io.github.lizisnotinting.tutorialmod;
 
+import io.github.lizisnotinting.tutorialmod.init.ModItems;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,5 +17,6 @@ public class TutorialMod {
     public static final String MOD_ID = "tutorialmod";
 
     public TutorialMod() {
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }
